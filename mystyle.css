@@ -1,0 +1,66 @@
+body{
+	background-color: darkgray;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* 	Style the grid */
+/* 	Note, the map currently has to be in a 16*19 grid */
+#game-grid {
+	height:800px;
+	width:950px;
+
+	margin:auto;
+	padding: 0;
+
+	outline:2px solid #000;
+	border: none;
+	font-size: 0;
+}
+
+/* 	Styling rules for all tiles */
+.grid-tile{
+    width: 50px;
+    height: 50px;
+	margin:0;
+	padding:0;
+	border:none;
+	outline:1px solid #000;
+	display:inline-block;
+}
+
+/* 	Entity coloring */
+/* 	Higher specificity gains priority, 
+	so entities always show up over tiles */
+/* 	The later styling applies after the former one it will be used as a layer number,
+	This matters because boxes and players might overlap other entities */
+#game-grid .entity-block{
+    background-color: brown;
+	background-image: url("box.png");
+}
+
+#game-grid .entity-block-goal{
+    background-color: magenta;
+	background-image: url("boxComplete.png");
+}
+
+#game-grid .entity-player {
+    background-color: green;
+	background-image: url("player.png");
+}
+
+/* 	Tiles while not covered by entities */
+.tile-wall{
+    background-color: gray;
+	background-image: url("wall.png");
+}
+
+.tile-space{
+    background-color: tan;
+	background-image: url("space.png");
+}
+
+.tile-goal{
+    background-color:darkolivegreen;
+	background-image: url("goal.png");
+}
